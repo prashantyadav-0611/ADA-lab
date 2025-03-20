@@ -39,10 +39,42 @@ void buildheap(int arr[7][3],int n){
     }
 }
 
+void delete(int arr[7][3],int *n){
+    int last[3]; 
+    arr[0][0]= arr[*n-1][0];
+    arr[0][1]= arr[*n-1][1];
+    arr[0][2]= arr[*n-1][2];
+
+    *n=*n-1;
+
+    heapify(arr,*n,0);
+}
+
+int find(int p[5],int x){
+    while (p[x]>0)
+    {
+        x = p[x];
+    }
+    return x;
+}
+
+void uni(int p[5] , int x, int y){
+    p[x] = y;
+}
+
+void krushkal(int arr[7][3],int n,int t[n-1][3]){
+    
+}
 int main(){
+int n=7;
 int arr[7][3]={{0,2,2},{2,3,4},{3,4,1},{4,1,6},{1,0,3},{0,3,5},{2,1,7}};
+int t[n-1][2];
 buildheap(arr,7);
 for(int j=0;j<7;j++){
+    printf("\n %d",arr[j][2]);
+}
+delete(arr,&n);
+for(int j=0;j<n;j++){
     printf("\n %d",arr[j][2]);
 }
 return 0;
