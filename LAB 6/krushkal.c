@@ -63,10 +63,26 @@ void uni(int p[5] , int x, int y){
 }
 
 void krushkal(int arr[7][3],int n,int t[n-1][3]){
+buildheap(arr,n);
+int p[n];
+for(int i=0;i<n;i++){
+    p[i]=-1;
+}
+int min_cost=0;
+int i=0;
+while (i<n-1 && n>0)
+{
+    int u =arr[0][0];
+    int v =arr[0][1];
+    delete(arr,&n);
     
 }
+
+}
+
 int main(){
 int n=7;
+int size=7;
 int arr[7][3]={{0,2,2},{2,3,4},{3,4,1},{4,1,6},{1,0,3},{0,3,5},{2,1,7}};
 int t[n-1][2];
 buildheap(arr,7);
