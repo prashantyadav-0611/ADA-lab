@@ -4,7 +4,7 @@
 void sort(int a[3][20], int cat) {
     for (int i = 0; i < 19; i++) {
         for (int j = 0; j < 19 - i; j++) {
-            if (a[cat][j] > a[cat][j + 1]) { // Sorting in ascending order
+            if (a[cat][j] > a[cat][j + 1]) { 
                 for (int k = 0; k < 3; k++) {
                     int temp = a[k][j];
                     a[k][j] = a[k][j + 1];
@@ -36,9 +36,9 @@ int main() {
         int maxActivities = 0;
         
         for (int i = 0; i < 20; i++) {
-            arr[0][i] = rand() % 50; // Start time
-            arr[1][i] = arr[0][i] + (1 + rand() % 10); // End time
-            arr[2][i] = arr[1][i] - arr[0][i]; // Duration
+            arr[0][i] = rand() % 50; 
+            arr[1][i] = arr[0][i] + (1 + rand() % 10); 
+            arr[2][i] = arr[1][i] - arr[0][i]; 
         }
         
         sort(arr, 0);

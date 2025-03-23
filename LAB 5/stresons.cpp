@@ -3,12 +3,10 @@
 
 using namespace std;
 
-// Function to create a matrix initialized with zeros
 vector<vector<int>> createMatrix(int size) {
     return vector<vector<int>>(size, vector<int>(size, 0));
 }
 
-// Function to print a matrix
 void printMatrix(const vector<vector<int>>& matrix) {
     for (const auto& row : matrix) {
         for (int val : row) {
@@ -19,7 +17,6 @@ void printMatrix(const vector<vector<int>>& matrix) {
     cout << endl;
 }
 
-// Function to add two matrices
 vector<vector<int>> addMatrix(const vector<vector<int>>& A, const vector<vector<int>>& B) {
     int size = A.size();
     vector<vector<int>> C(size, vector<int>(size, 0));
@@ -31,7 +28,6 @@ vector<vector<int>> addMatrix(const vector<vector<int>>& A, const vector<vector<
     return C;
 }
 
-// Function to subtract two matrices
 vector<vector<int>> subtractMatrix(const vector<vector<int>>& A, const vector<vector<int>>& B) {
     int size = A.size();
     vector<vector<int>> C(size, vector<int>(size, 0));
@@ -43,7 +39,6 @@ vector<vector<int>> subtractMatrix(const vector<vector<int>>& A, const vector<ve
     return C;
 }
 
-// Strassen's matrix multiplication
 vector<vector<int>> strassenMultiply(const vector<vector<int>>& A, const vector<vector<int>>& B) {
     int size = A.size();
     if (size == 1) {
@@ -100,7 +95,7 @@ vector<vector<int>> strassenMultiply(const vector<vector<int>>& A, const vector<
 }
 
 int main() {
-    int N = 8; // Matrix size (must be a power of 2)
+    int N = 8; 
 
     vector<vector<int>> A = {
         {1, 2, 3, 4, 5, 6, 7, 8},
@@ -113,7 +108,7 @@ int main() {
         {8, 1, 2, 3, 4, 5, 6, 7}
     };
 
-    vector<vector<int>> B = A; // Using same matrix for multiplication
+    vector<vector<int>> B = A; 
     vector<vector<int>> C = strassenMultiply(A, B);
 
     cout << "Resultant Matrix C (A x B):\n";
