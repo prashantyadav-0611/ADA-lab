@@ -7,6 +7,7 @@
 **OBJECTIVE**= to find the first peak element in a given random one dimension array
 **working**=This program finds a peak element in an array using a recursive binary search approach. The peak function calculates the middle index and checks if the middle element is smaller than its left or right neighbor. If so, it recursively searches the appropriate half of the array. If the middle element is greater than or equal to both neighbors, it is considered a peak, and its index is returned. The main function initializes an array, calls peak to find a peak index, and prints the result.
 **output**= The code will give the index of the first peak element it will encounter
+![1d peak](https://github.com/user-attachments/assets/96c56273-91cb-4235-be9c-bfd1e36967af)
 
 
 **PROGRAM 2**
@@ -273,3 +274,28 @@ Edge    Weight
 1 - 4   5
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**LAB-7**
+
+**PROGRAM 1**
+**OBJECTIVE**=To find shortest path from each node of a graph to each other node.
+**working**=This program implements the Floyd-Warshall Algorithm to find the All-Pairs Shortest Path (APSP) in a weighted graph with V vertices. It initializes the distance matrix with given edge weights and iteratively updates the shortest distances between all pairs of vertices using an intermediate vertex k. If a shorter path is found via k, it updates dist[i][j] = dist[i][k] + dist[k][j]. The algorithm runs in O(V³) time complexity, making it efficient for small to medium-sized graphs. Finally, the shortest distance matrix is printed, where INF represents unreachable pairs.
+**output**=Shortest distances between every pair of vertices:
+   0    3    7    5 
+   2    0    6    4 
+   3    1    0    5 
+   5    3    2    0 
+
+
+**PROGRAM 2**
+**OBJECTIVE**=To implement multistage graph and find the shortest distance between source and sink using front substitution method.
+**working**=This program finds the shortest path in a Directed Acyclic Graph (DAG) from a source (vertex 0) to a destination (vertex N-1). It uses Dynamic Programming (DP) by storing the minimum distance (fdist[]) from each node to the destination and backtracking with path[] to reconstruct the path. It iterates  backward from the destination, updating the shortest known distance based on reachable nodes. The time complexity is O(N²) for dense graphs. The program outpus the minimum cost and the path taken.
+  **output**=Minimum cost from source to destination: 8
+Path: 0 2 6 7 
+
+
+**PROGRAM 3**
+**OBJECTIVE**= To find no. of stages in a given multistage graph.
+**working**=This program determines the number of stages in a multistage graph by traversing the adjacency matrix representation of the graph. It starts from the source node (0) and follows edges to count the number of intermediate stages until reaching the sink node. The function findStages() iterates through the adjacency matrix and counts transitions between nodes. The result includes two extra stages: one for the source and one for the sink. The approach works for layered graphs but assumes a direct topological structure. The time complexity is O(N²) in the worst case.
+**output**=Number of stages in the multistage graph: 5
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
