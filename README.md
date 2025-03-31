@@ -10,16 +10,21 @@
 ![1d peak](https://github.com/user-attachments/assets/96c56273-91cb-4235-be9c-bfd1e36967af)
 
 
+
 **PROGRAM 2**
 **OBJECTIVE**= to find the first peak element in a given random two dimension array
 **working**=This program finds a peak element in a 2D matrix using a binary search approach. The `maximum` function finds the index of the maximum element in the given column. The `findpeak` function uses binary search on columns, checking if the maximum element in the middle column is smaller than its left or right neighbor. If so, it continues searching in the corresponding half; otherwise, it identifies the peak and prints its position. The `main` function initializes the matrix, takes user input, displays it, and calls `findpeak` to determine the peak element.
 **output**=the code will print the index of the peak element.
+![2d peak](https://github.com/user-attachments/assets/22cd410e-53b8-4729-9e1c-a2e9c0166ab9)
+
 
 
 **PROGRAM 3**
 **OBJECTIVE**=To compute a raise to power b in logb time complexity
 **working**=This program calculates the power of a number using exponentiation by squaring, which optimizes the process to O(log b) time complexity. The power function initializes result as 1 and iteratively squares a while halving b. If b is odd, it multiplies result by a. The main function takes user input for base and exponent, calls power, and prints the result.
 **output**=a^b is calculated in logb time complexity
+![a^b](https://github.com/user-attachments/assets/fc4c62a2-3e61-4f63-a593-4629385ea37b)
+
 
 
 **PROGRAM 4**
@@ -41,42 +46,56 @@
 **OBJECTIVE**=To analyze the time complexity of bubble sort with various input size.
 **working**=This program analyzes the time complexity of Bubble Sort by sorting arrays of increasing sizes and plotting the execution time. The bubble_sort function implements the optimized Bubble Sort, which stops early if the array becomes sorted. The main loop generates random arrays, sorts them, and records the time taken. The results are plotted using matplotlib, comparing actual sorting times with the theoretical O(n²) complexity. The plot visually demonstrates how Bubble Sort scales with input size.
 **output**=a graph displayig the time compexity vs input size along with theoritical n^2 graph.
+![bubble](https://github.com/user-attachments/assets/7be9de00-1aeb-4d95-9652-d8685c206dc0)
+
 
 
 **PROGRAM 2**
 **OBJECTIVE**=To analyze the time complexity of HEAP sort with various input size.
 **working**=his program analyzes the time complexity of Heap Sort by sorting arrays of increasing sizes and plotting the execution time. The heapify function maintains the heap property, and heap_sort first builds a max heap, then extracts the maximum element one by one. The main loop generates random arrays, sorts them, and records the execution time. The results are plotted using matplotlib, comparing actual sorting times with the theoretical O(n log n) complexity, showing Heap Sort's efficiency compared to quadratic sorting algorithms.
 **output**=a graph displayig the time compexity vs input size along with theoritical nlogn graph.
+![heap](https://github.com/user-attachments/assets/82b952b5-17bb-4cf0-bf89-4596a58a628d)
+
 
 
 **PROGRAM 3**
 **OBJECTIVE**=To analyze the time complexity of inssert sort with various input size.
 **working**=This program analyzes the time complexity of Insertion Sort by sorting arrays of increasing sizes and plotting the execution time. The insertion_sort function sorts an array by repeatedly shifting elements to insert each key in its correct position. The main loop generates random arrays, sorts them, and records the execution time. The results are plotted using matplotlib, comparing actual sorting times with the theoretical O(n²) complexity, illustrating Insertion Sort’s inefficiency for large inputs due to its quadratic growth.
 **output**=a graph displayig the time compexity vs input size along with theoritical n^2 graph.
+![insertion](https://github.com/user-attachments/assets/20de84b6-ae04-4d62-9204-35c2aa2db6a8)
+
 
 
 **PROGRAM 4**
 **OBJECTIVE**=To analyze the time complexity of magic square generating code with various input size.
 **working**=This program analyzes the time complexity of Magic Square Generation by constructing magic squares of increasing sizes and plotting the execution time. The magic_square function follows the Siamese method, placing numbers diagonally up-left and adjusting when a conflict occurs. The main loop generates magic squares of different sizes, measures execution time, and records the results. The execution time is plotted using matplotlib, comparing actual times with the theoretical O(n²) complexity, illustrating that filling an n × n matrix follows quadratic growth, confirming the O(n²) time complexity of the method.
 **output**=a graph displayig the time compexity vs input size along with theoritical n^2 graph.
+![Figure_1](https://github.com/user-attachments/assets/54ea6754-3785-44b4-a641-47e5bc97f384)
+
 
 
 **PROGRAM 5**
 **OBJECTIVE**=To analyze the time complexity of merge sort with various input size.
 **working**=This program analyzes the time complexity of Merge Sort by sorting arrays of increasing sizes and plotting the execution time. The merge_sort function follows a divide-and-conquer approach, recursively splitting the array into halves, sorting them, and merging them back in sorted order. The main loop generates random arrays, sorts them, and records the execution time. The results are plotted using matplotlib, comparing actual sorting times with the theoretical O(n log n) complexity, illustrating Merge Sort’s efficiency compared to quadratic sorting algorithms.
 **output**=a graph displayig the time compexity vs input size along with theoritical nlogn graph.
+![merge](https://github.com/user-attachments/assets/701d80da-b6e8-448d-b552-67b33282de16)
+
 
 
 **PROGRAM 6**
 **OBJECTIVE**=To analyze the time complexity of quick sort with various input size.
 **working**=This program analyzes the time complexity of QuickSort by sorting arrays of increasing sizes and plotting the execution time. The quick_sort function recursively partitions the array using a pivot and sorts the left and right subarrays. The main loop generates random arrays, sorts them, and records execution time. The results are plotted using matplotlib, comparing actual sorting times with the theoretical O(n log n) complexity, illustrating QuickSort’s efficiency for large datasets.
 **output**=a graph displayig the time compexity vs input size along with theoritical nlogn graph.
+![quick](https://github.com/user-attachments/assets/65ffc025-1dd0-414f-b6f4-be817dc550b0)
+
 
 
 **PROGRAM 7**
 **OBJECTIVE**=To analyze the time complexity of selection sort with various input size.
 **working**=This program analyzes the time complexity of Selection Sort by sorting arrays of increasing sizes and plotting the execution time. The selection_sort function repeatedly finds the minimum element and swaps it with the current position, making it inefficient for large inputs due to its O(n²) complexity. The main loop generates random arrays, sorts them, and records execution time. The results are plotted using matplotlib, comparing actual sorting times with the theoretical O(n²) growth, clearly demonstrating its quadratic time complexity.
 **output**=a graph displayig the time compexity vs input size along with theoritical n^2 graph.
+![selection](https://github.com/user-attachments/assets/95db0f13-926b-44b1-969c-eef4b118ed04)
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -97,6 +116,8 @@ s.no  profit1 profit2    profit3   maxprofit
 8     1481      1315       1498       1498
 9     1431      1185       1435       1435
 10     1204      1090       1251       1251.......
+![fractionalknapsack](https://github.com/user-attachments/assets/0ccbdc10-c65b-42db-a614-5e55e6e3cef8)
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -116,6 +137,8 @@ Convex Hull points:
 (2, -2)
 (-2, 2)
 (2, 2)
+![quickhull](https://github.com/user-attachments/assets/6f3bedae-093c-41ea-882f-b0339cc090c6)
+
 
 
 **PROGRAM 2**
@@ -161,6 +184,8 @@ Resultant Matrix C (A x B):
 180 184 180 168 148 120 148 168
 168 180 184 180 168 148 120 148
 148 168 180 184 180 168 148 120
+![matrix](https://github.com/user-attachments/assets/a8efdfb6-9440-4fcc-80a2-63687147aff7)
+
 
 
 **PROGRAM 4**
@@ -183,6 +208,8 @@ Enter coordinates of point 4: 6 7
 Enter coordinates of point 5: 9 1
 Enter coordinates of point 6: 11 -5
 Number of non-collinear triangles: 19
+![no of triangles](https://github.com/user-attachments/assets/0dfec088-095f-4603-a1a7-b7b9276d5def)
+
 
 
 **PROGRAM 6**
@@ -210,6 +237,8 @@ s.no  By Start Time  By End Time  By Duration  Max Activities
 7       7           9           7           9
 8       6           6           1           6
 9       7           8           6           8........
+![activity selection](https://github.com/user-attachments/assets/9a2ad1df-c0e7-472e-a6b5-5f8bff87f43e)
+
 
 
 **PROGRAM 2**
@@ -225,6 +254,8 @@ s.no  By Start Time  By End Time  By Duration  Max Activities
 Enter the source vertex (0-5): 3
 Shortest distances from source vertex 3:
 99  99  4  0  11  99  
+![dikestra](https://github.com/user-attachments/assets/7ba24b55-a972-4f7f-9e31-318fb82b7002)
+
 
 
 **PROGRAM 3**
@@ -232,6 +263,8 @@ Shortest distances from source vertex 3:
 **wokring**=This program finds the median of an unsorted array using the QuickSelect algorithm, which is a variation of QuickSort optimized for finding the k-th smallest element in O(n) average time complexity. The partition() function selects a pivot (last element) and partitions the array around it. The quickSelect() function recursively finds the middle element if the array length is odd, or the average of the two middle elements if even. The program then prints the computed median efficiently without fully sorting the array.
 **output**=int arr[] = {12, 3, 5, 7, 19, 26, 13, 2, 10, 15};
 median = 11
+![median](https://github.com/user-attachments/assets/2b2a1d2a-bfef-4b65-adf8-5af72645434a)
+
 
 
 **PROGRAM 4**
@@ -247,6 +280,9 @@ Resultant Matrix C (A x B):
 144 140 144 156 176 204 176 156
 156 144 140 144 156 176 204 176
 176 156 144 140 144 156 176 204
+![matrix](https://github.com/user-attachments/assets/5480a8bb-d6f4-4f85-a7e1-d39e6be904dd)
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -261,6 +297,8 @@ Resultant Matrix C (A x B):
 1 -- 0 (Cost: 3)
 2 -- 3 (Cost: 4)
 Total Minimum Cost: 10
+![krushkals](https://github.com/user-attachments/assets/ce3cbb65-7656-4719-b4c6-224415dbc527)
+
 
 
 **PROGRAM 2**
@@ -272,6 +310,8 @@ Edge    Weight
 1 - 2   3
 0 - 3   6
 1 - 4   5
+![primz](https://github.com/user-attachments/assets/99d48669-f6c5-4bfb-b454-5fbacd28dec4)
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **LAB-7**
@@ -284,6 +324,8 @@ Edge    Weight
    2    0    6    4 
    3    1    0    5 
    5    3    2    0 
+![APSP](https://github.com/user-attachments/assets/281261a0-bb9f-461b-b01f-b93d039f85eb)
+
 
 
 **PROGRAM 2**
@@ -291,6 +333,8 @@ Edge    Weight
 **working**=This program finds the shortest path in a Directed Acyclic Graph (DAG) from a source (vertex 0) to a destination (vertex N-1). It uses Dynamic Programming (DP) by storing the minimum distance (fdist[]) from each node to the destination and backtracking with path[] to reconstruct the path. It iterates  backward from the destination, updating the shortest known distance based on reachable nodes. The time complexity is O(N²) for dense graphs. The program outpus the minimum cost and the path taken.
   **output**=Minimum cost from source to destination: 8
 Path: 0 2 6 7 
+![MSG](https://github.com/user-attachments/assets/f9aa948c-5e9e-48b1-912b-870309ef2bd4)
+
 
 
 **PROGRAM 3**
