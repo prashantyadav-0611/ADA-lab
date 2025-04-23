@@ -2,7 +2,7 @@
 #include <limits.h>
 
 #define INF INT_MAX
-#define N 4  // Number of cities
+#define N 4  
 
 int tsp(int pos, int visited_mask, int dp[N][1 << N], int path[N][1 << N], int cost[N][N]) {
     if (visited_mask == (1 << N) - 1)
@@ -55,7 +55,7 @@ int main() {
     int dp[N][1 << N];
     int path[N][1 << N];
 
-    // Initialize dp and path arrays
+    
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < (1 << N); j++) {
             dp[i][j] = -1;

@@ -20,18 +20,18 @@ void shortestPath(int graph[N][N], int n) {
     for (int count = 0; count < n - 1; count++) {
         int u = -1;
 
-        // Find the unvisited node with the smallest distance
+        
         for (int i = 0; i < n; i++) {
             if (!visited[i] && (u == -1 || dist[i] < dist[u])) {
                 u = i;
             }
         }
 
-        if (u == -1) break; // No more reachable nodes
+        if (u == -1) break;
 
         visited[u] = 1;
 
-        // Update distances of neighbors
+        
         for (int v = 0; v < n; v++) {
             if (graph[u][v] != 0 && dist[u] != INF && dist[u] + graph[u][v] < dist[v]) {
                 dist[v] = dist[u] + graph[u][v];
@@ -42,7 +42,7 @@ void shortestPath(int graph[N][N], int n) {
 
     printf("Minimum cost from source to destination: %d\n", dist[n - 1]);
 
-    // Print path
+    
     printf("Path: ");
     int stack[N], top = -1;
     int temp = n - 1;
