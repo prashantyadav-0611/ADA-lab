@@ -342,4 +342,80 @@ Path: 0 2 6 7
 **working**=This program determines the number of stages in a multistage graph by traversing the adjacency matrix representation of the graph. It starts from the source node (0) and follows edges to count the number of intermediate stages until reaching the sink node. The function findStages() iterates through the adjacency matrix and counts transitions between nodes. The result includes two extra stages: one for the source and one for the sink. The approach works for layered graphs but assumes a direct topological structure. The time complexity is O(N²) in the worst case.
 **output**=Number of stages in the multistage graph: 5
 
+
+
+**PROGRAM 4**
+**OBJECTIVE** = To implement multistage graph and find the shortest distance between source and sink using backward substitution method.
+**working**= This C program implements Dijkstra’s algorithm to find the shortest path from a source (node 0) to a destination (node 7) in a weighted directed graph using an adjacency matrix. It initializes distances to infinity, marks all nodes as unvisited, and repeatedly selects the unvisited node with the smallest known distance. It then updates the distances of its adjacent nodes. Once the shortest path is found, it prints both the minimum cost and the path taken using a stack to reverse the path stored in the path[] array. This approach works efficiently for non-negative weights and small graphs.
+**output**=
+Minimum cost from source to destination: 8
+Path: 0 2 6 7
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**LAB 8**
+
+**PROGRAM 1**
+**OBJECTIVE**= To implement the 0/1 knapsack problem using dynamic programming.
+**WORKING**=This C program solves the 0/1 Knapsack Problem using a dynamic programming approach with state-space generation and domination pruning. It constructs a sequence of solution sets S[0] to S[n], where each S[i] holds non-dominated profit-weight pairs using the first i items. For each item, it generates new combinations by adding the current item to existing pairs, merges them with previous solutions, and removes dominated entries (i.e., those with higher weight and lower or equal profit) using the merge_purge function. The optimal solution is the pair in S[n] with the highest profit and valid weight (≤ W). The program also backtracks the selected items using trace_knp, which checks if a previous state exists after removing the current item's profit and weight. Finally, it prints the maximum profit, total weight, and which items were included in the knapsack.
+**output**=
+Optimal solution:
+Total profit p = 7
+Total weight w = 9
+Selected items (x_i values): 0 0 1 1 
+![0-1knapsack](https://github.com/user-attachments/assets/58fb41af-0397-4a00-81b8-663a3a66bd9d)
+
+
+
+**PROGRAM 2**
+**OBJECTIVE**= To find the order in which matices must be multiplied so as to reduce the no. of scalar multiplictions using dynamic programing.
+**WORKING**=This C program implements the Matrix Chain Multiplication (MCM) algorithm using dynamic programming to determine the most efficient way to multiply a chain of matrices. It takes the number of matrices and their dimensions as input, where each matrix 𝐴𝑖 has dimensions 𝑝[𝑖−1]×𝑝[𝑖]. The function mcm calculates the minimum number of scalar multiplications needed using a bottom-up approach and stores the split points in matrix s. The print function recursively uses the s matrix to print the optimal parenthesization that minimizes the total cost. Finally, it displays the minimum cost and the optimal order of multiplication, ensuring proper memory cleanup before program termination.
+**output**=
+Enter number of matrices: 5
+Enter dimensions (length 6): 19
+10
+5
+15
+5
+20
+Minimum number of scalar multiplications: 3475
+Optimal Parenthesization: ( ( A1 ( A2 ( A3 A4 ) ) ) A5 )
+![mcm](https://github.com/user-attachments/assets/95da4991-c28a-4b8d-931c-9d42a695122b)
+
+
+
+**PROGRAM 3**
+**OBJECTIVE**= To find the solution to the travelling sales person problem using dynamic programming.
+**WORKING**=This C program solves the Travelling Salesman Problem (TSP) using Dynamic Programming with Bitmasking. It defines a tsp function that recursively computes the minimum cost to visit all cities exactly once and return to the starting city, using memoization (dp array) to avoid redundant calculations and path array to track the next city in the optimal path. The cost matrix defines the travel cost between cities. The algorithm starts at city 0 with only it visited (bitmask = 1), explores all possibilities, and returns the minimum tour cost. The printPath function reconstructs and displays the optimal tour using the path array. The solution ensures efficiency with time complexity O(N²·2ᴺ), making it suitable for small N (≤20).
+**output**=
+Using cost matrix:
+  0  10  15  20 
+  5   0   9  10 
+  6  13   0  12 
+  8   8   9   0 
+Minimum cost of travelling: 35
+Optimal Path: 0 --> 1 --> 3 --> 2 --> 0
+![travelling sales person](https://github.com/user-attachments/assets/6672482d-1184-432e-ae1a-a4b89147f4e6)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**LAB 9**
+
+**PROGRAM 1**
+**OBJECTIVE**= To write a code to place n queens in a NxN matrix so that no to queens have same row,column,diagonal using back tracking.
+**Working**=This C program solves the N-Queens problem using backtracking. The goal is to place n queens on an n×n chessboard such that no two queens threaten each other (i.e., no two queens share the same row, column, or diagonal). The place function checks if placing a queen at column i in row k is safe by verifying column and diagonal conflicts. The NQueens function tries placing queens row by row, recursively exploring valid configurations. When a solution is found (i.e., queens are placed in all rows), it is printed as a matrix where 1 represents a queen and 0 an empty cell.
+**output**=
+Enter the number of queens: 4
+Solution:
+0 1 0 0 
+0 0 0 1 
+1 0 0 0 
+0 0 1 0 
+Solution:
+0 0 1 0 
+1 0 0 0 
+0 0 0 1 
+0 1 0 0 
+![nqueens](https://github.com/user-attachments/assets/8be7144e-1836-4f9f-bc9b-86c4c7339c7c)
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
