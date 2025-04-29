@@ -5,13 +5,13 @@
 
 void nextValue(int k, int n, int m, int G[MAX][MAX], int x[MAX]) {
     while (1) {
-        x[k] = (x[k] + 1) % (m + 1); // Try next color
+        x[k] = (x[k] + 1) % (m + 1); 
         
         if (x[k] == 0) {
-            return; // No more colors to try
+            return; 
         }
         
-        // Check if color is valid for all adjacent vertices
+        
         bool valid = true;
         for (int i = 1; i <= n; i++) {
             if (G[k][i] && x[i] == x[k]) {
@@ -21,7 +21,7 @@ void nextValue(int k, int n, int m, int G[MAX][MAX], int x[MAX]) {
         }
         
         if (valid) {
-            return; // Found valid color
+            return; 
         }
     }
 }
@@ -31,11 +31,11 @@ void mColoring(int k, int n, int m, int G[MAX][MAX], int x[MAX]) {
         nextValue(k, n, m, G, x);
         
         if (x[k] == 0) {
-            return; // Backtrack
+            return; 
         }
         
         if (k == n) {
-            // Print solution
+            
             printf("Valid coloring: ");
             for (int i = 1; i <= n; i++) {
                 printf("Vertex %d=%d  ", i, x[i]);
@@ -48,17 +48,17 @@ void mColoring(int k, int n, int m, int G[MAX][MAX], int x[MAX]) {
 }
 
 int main() {
-    int n = 4;  // Number of vertices
-    int m;      // Number of colors
-    int x[MAX]; // Color assignments
+    int n = 4;  
+    int m;      
+    int x[MAX]; 
     
-    // Initialize graph adjacency matrix (1-based indexing)
+    
     int G[MAX][MAX] = {
-        {0, 0, 0, 0, 0},  // Row 0 unused
-        {0, 0, 1, 1, 1},  // Vertex 1
-        {0, 1, 0, 1, 0},  // Vertex 2
-        {0, 1, 1, 0, 1},  // Vertex 3
-        {0, 1, 0, 1, 0}   // Vertex 4
+        {0, 0, 0, 0, 0},  
+        {0, 0, 1, 1, 1},  
+        {0, 1, 0, 1, 0},  
+        {0, 1, 1, 0, 1},  
+        {0, 1, 0, 1, 0}   
     };
     
     printf("Graph Coloring Problem\n");
@@ -68,7 +68,7 @@ int main() {
     printf("Enter number of colors: ");
     scanf("%d", &m);
     
-    // Initialize color assignments
+    
     for (int i = 0; i <= n; i++) {
         x[i] = 0;
     }

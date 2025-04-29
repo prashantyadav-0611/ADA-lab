@@ -3,18 +3,18 @@
 
 #define MAX 100
 
-int path[MAX];  // Stores the Hamiltonian path
+int path[MAX];  
 
-// Finds next valid vertex for the path
+
 void nextVertex(int pos, int n, int G[MAX][MAX]) {
     while (1) {
         path[pos] = (path[pos] + 1) % (n + 1);
         
         if (path[pos] == 0) {
-            return; // No more vertices to try
+            return; 
         }
         
-        // Check if this vertex can be added to the path
+        
         if (G[path[pos-1]][path[pos]]) {
             bool alreadyInPath = false;
             for (int i = 1; i < pos; i++) {
@@ -25,31 +25,30 @@ void nextVertex(int pos, int n, int G[MAX][MAX]) {
             }
             
             if (!alreadyInPath) {
-                // Check if last vertex connects back to first
+
                 if (pos < n || (pos == n && G[path[n]][path[1]])) {
-                    return; // Valid vertex found
+                    return; 
                 }
             }
         }
     }
 }
 
-// Finds Hamiltonian cycles using backtracking
+
 void hamiltonian(int pos, int n, int G[MAX][MAX]) {
     while (1) {
         nextVertex(pos, n, G);
         
         if (path[pos] == 0) {
-            return; // Backtrack
+            return; 
         }
         
         if (pos == n) {
-            // Print the Hamiltonian cycle
             printf("Hamiltonian Cycle: ");
             for (int i = 1; i <= n; i++) {
                 printf("%d ", path[i]);
             }
-            printf("%d\n", path[1]); // Complete the cycle
+            printf("%d\n", path[1]); 
         } else {
             hamiltonian(pos + 1, n, G);
         }
@@ -57,15 +56,15 @@ void hamiltonian(int pos, int n, int G[MAX][MAX]) {
 }
 
 int main() {
-    // Built-in adjacency matrix (1-based indexing)
-    int n = 5;  // Number of vertices
+    
+    int n = 5;  
     int G[MAX][MAX] = {
-        {0, 0, 0, 0, 0, 0},  // Row 0 unused
-        {0, 0, 1, 0, 1, 0},  // Vertex 1 connections
-        {0, 1, 0, 1, 1, 1},  // Vertex 2 connections
-        {0, 0, 1, 0, 0, 1},  // Vertex 3 connections
-        {0, 1, 1, 0, 0, 1},  // Vertex 4 connections
-        {0, 0, 1, 1, 1, 0}   // Vertex 5 connections
+        {0, 0, 0, 0, 0, 0},  
+        {0, 0, 1, 0, 1, 0},  
+        {0, 1, 0, 1, 1, 1},
+        {0, 0, 1, 0, 0, 1},  
+        {0, 1, 1, 0, 0, 1},  
+        {0, 0, 1, 1, 1, 0}   
     };
     
     printf("Finding Hamiltonian Cycles for Graph with %d vertices:\n", n);
@@ -78,16 +77,16 @@ int main() {
     }
     printf("\n");
     
-    // Initialize path
+    
     for (int i = 0; i <= n; i++) {
         path[i] = 0;
     }
     
-    // Start with vertex 1
+    
     path[1] = 1;
     
     printf("All Hamiltonian Cycles:\n");
-    hamiltonian(2, n, G); // Start from position 2
+    hamiltonian(2, n, G); 
     
     return 0;
 }
