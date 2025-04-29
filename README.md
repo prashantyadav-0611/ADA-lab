@@ -427,7 +427,26 @@ Solution:
 **OBJECTIVE**= To write a code using backtracking to find subset of a given set such that sum of subset elements is equal to a given value.
 **Working**=This C program solves the Sum of Subsets problem using backtracking. Given a set of integers, it finds and prints all subsequences whose elements sum up to a given target m. It uses the function sum_subsequence, which tries two choices at every step: either including the current element (marked by x[k] = 1) or excluding it (x[k] = 0). The print function prints the current subset if its sum matches m. To optimize, it also uses the remaining sum r to prune branches early when it's impossible to reach m with the remaining elements.
 **output**=
-              Finding Hamiltonian Cycles for Graph with 5 vertices:
+            Enter size: 6
+            Enter elements: 5 10 12 13 15 18
+            Enter the sum: 30
+            Solution: 
+            5 10 15 
+            Solution: 
+            5 12 13 
+            Solution: 
+            12 18 
+            ![sum of subset](https://github.com/user-attachments/assets/d47079cc-c4db-45d9-9a8a-76195f09de7f)
+
+
+
+
+
+**PROGRAM 2**
+**OBJECTIVE**= To write a code using backtracking to find a hamiltonion cycle in a given graph.
+**Working**=This C program is designed to find and print all Hamiltonian cycles in a graph using the backtracking technique. A Hamiltonian cycle is a path that visits every vertex exactly once and returns to the starting vertex. The program uses an adjacency matrix G to represent the graph, and a path array to store the current sequence of vertices being explored. The nextVertex function tries to find the next valid vertex that can be added to the current path. It ensures that the new vertex is adjacent to the last vertex in the path, has not been visited already, and in case it’s the last vertex, checks if it connects back to the starting vertex to complete the cycle. The hamiltonian function calls nextVertex and builds the path recursively, printing the complete cycle when all vertices have been included. The graph is hardcoded with 5 vertices, and the program starts the cycle from vertex 1. By systematically exploring all possibilities and backtracking when necessary, the program finds and displays all Hamiltonian cycles that exist in the given graph.
+**output**=
+             Finding Hamiltonian Cycles for Graph with 5 vertices:
               Adjacency Matrix:
               0 1 0 1 0 
               1 0 1 1 1 
@@ -438,17 +457,15 @@ Solution:
               All Hamiltonian Cycles:
               Hamiltonian Cycle: 1 2 3 5 4 1
               Hamiltonian Cycle: 1 4 5 3 2 1
-![sum of subset](https://github.com/user-attachments/assets/d47079cc-c4db-45d9-9a8a-76195f09de7f)
+![hamiltoion](https://github.com/user-attachments/assets/8ef31a3c-2261-4d85-b0c1-89accb01d090)
 
 
 
-
-
-**PROGRAM 2**
-**OBJECTIVE**= To write a code using backtracking to find a hamiltonion cycle in a given graph.
-**Working**=This C program is designed to find and print all Hamiltonian cycles in a graph using the backtracking technique. A Hamiltonian cycle is a path that visits every vertex exactly once and returns to the starting vertex. The program uses an adjacency matrix G to represent the graph, and a path array to store the current sequence of vertices being explored. The nextVertex function tries to find the next valid vertex that can be added to the current path. It ensures that the new vertex is adjacent to the last vertex in the path, has not been visited already, and in case it’s the last vertex, checks if it connects back to the starting vertex to complete the cycle. The hamiltonian function calls nextVertex and builds the path recursively, printing the complete cycle when all vertices have been included. The graph is hardcoded with 5 vertices, and the program starts the cycle from vertex 1. By systematically exploring all possibilities and backtracking when necessary, the program finds and displays all Hamiltonian cycles that exist in the given graph.
+**PROGRAM 3**
+**OBJECTIVE**= To write a code usiing backtracking to find if a graph is colourable using m clours such that no two adjacent nodes have same colour.
+**Working**=This C program solves the Graph Coloring Problem using the backtracking method. The aim is to assign colors to the vertices of a given graph such that no two adjacent vertices share the same color, using at most m different colors. The graph is represented by an adjacency matrix G, and an array x keeps track of the color assigned to each vertex. The nextValue function tries to assign the next possible color to the current vertex k while checking that it does not conflict with already colored adjacent vertices. If no valid color is found, it triggers backtracking. The mColoring function calls nextValue to explore all valid color assignments recursively, and prints each valid coloring when all vertices are colored. The graph used in this example has 4 vertices with specific edges between them (1-2, 1-3, 1-4, 2-3, 3-4). The number of colors m is input by the user. By systematically trying all possibilities and backtracking when necessary, the program outputs all valid ways the graph can be colored using the given number of colors.
 **output**=
-             Graph Coloring Problem
+           Graph Coloring Problem
              Vertices: 4
              Edges: 1-2, 1-3, 1-4, 2-3, 3-4
              
@@ -461,20 +478,3 @@ Solution:
              Valid coloring: Vertex 1=2  Vertex 2=3  Vertex 3=1  Vertex 4=3  
              Valid coloring: Vertex 1=3  Vertex 2=1  Vertex 3=2  Vertex 4=1  
              Valid coloring: Vertex 1=3  Vertex 2=2  Vertex 3=1  Vertex 4=2 
-![hamiltoion](https://github.com/user-attachments/assets/8ef31a3c-2261-4d85-b0c1-89accb01d090)
-
-
-
-**PROGRAM 3**
-**OBJECTIVE**= To write a code usiing backtracking to find if a graph is colourable using m clours such that no two adjacent nodes have same colour.
-**Working**=This C program solves the Graph Coloring Problem using the backtracking method. The aim is to assign colors to the vertices of a given graph such that no two adjacent vertices share the same color, using at most m different colors. The graph is represented by an adjacency matrix G, and an array x keeps track of the color assigned to each vertex. The nextValue function tries to assign the next possible color to the current vertex k while checking that it does not conflict with already colored adjacent vertices. If no valid color is found, it triggers backtracking. The mColoring function calls nextValue to explore all valid color assignments recursively, and prints each valid coloring when all vertices are colored. The graph used in this example has 4 vertices with specific edges between them (1-2, 1-3, 1-4, 2-3, 3-4). The number of colors m is input by the user. By systematically trying all possibilities and backtracking when necessary, the program outputs all valid ways the graph can be colored using the given number of colors.
-**output**=
-            Enter size: 6
-            Enter elements: 5 10 12 13 15 18
-            Enter the sum: 30
-            Solution: 
-            5 10 15 
-            Solution: 
-            5 12 13 
-            Solution: 
-            12 18 
